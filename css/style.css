@@ -2,10 +2,7 @@ html, body {
   margin: 0 0 0 0;
   padding: 0;
   width: 100%;
-  /*height: 50vh;*/
   background: black;
-
-  /*max-*//*height: 130%;*/
 }
 
 * {box-sizing: border-box}
@@ -119,14 +116,15 @@ img {vertical-align: middle;}*/
     border: 2px solid black;
     z-index: 102;
 }
-.navbarContainer{
-	width: 100%;
-    height: 3vw;
-    top: -6vw;
+.header{
+	width: 100vw;
+    height: 6vh;
+    top: 0vw;
     left: 0%;
-    position: relative;
-    z-index: 95;
+    position: fixed;
+    z-index: 105;
     display: inline-block;
+    background-color: white;
 
 }
 .navbar {
@@ -207,127 +205,162 @@ img {vertical-align: middle;}*/
     height: 40vh;
     display: inline-block;
     top: 10vh;
-    left: -1vw;
-    border: 1px solid black;
+    left: 1vw;
+    /*border: 1px solid black;*/
     position: relative;
 }
 
 .hexagon_container{
-    z-index: 102;
+	z-index: 102;
     display: inline-block;
     float: left;
     position: relative;
     background-image: url(hexagon.png)
- 	top: 1vh;
-    left: 4.99vw;
+    top: 1vh;
+    left: 9.99vw;
     height: 17vh;
-    padding-top: 13px;
-    padding-top: 2.3vw;
-    top: 0.7vh;
+    top: 4.7vh;
 }
 
-.polygon{
-	background-color: black;
-	position: relative;
-	display: inline-block;
+svg {
+	/*width:10vw;*/
+	/*cursor: pointer;*/
 }
+
+path {
+	cursor: pointer;
+ 	fill: white;
+ 	z-index: 106;
+ 	/*background-color: black;*/
+}
+path:hover, .navbar2:hover {
+	cursor: pointer;
+	fill: #6292dad4;
+	stroke: white;
+	color: white;
+
+ }
 
 #hex2{
-    top: 9.5vh;
-    left: -22.5vw;
+    top: 13.5vh;
+    left: -7.5vw;
     position: relative;
 }
 
 #hex3{
- 	top: 1.1vh;
-    left: 5vw;
+ 	top: 13.5vh;
+    left: -2.5vw;
     position: relative;
 }
 
 #hex4{
-	top: -7.5vh;
-    left: -7.49vw;
+	top: 4.5vh;
+    left: -5vw;
     position: relative;
 }
 
 #hex5{
-	top: -33.3vh;
-    left: 19.97vw;
+	top: 5.5vh;
+    left: 9.97vw;
     position: relative;
 }
 
 #hex6{
-    left: 0vw;
-    top: -15.9vh;
+    left: 15vw;
+    top: 5.5vh;
 }
 
 #hex7{
-	top: -41.5vh;
-    left: 27.5vw;
+	top: -3.5vh;
+    left: 12.5vw;
     position: relative;
 }
 
 .navbar2{
-	height: 5vw;
-	width:4vh;
-	position: absolute;
-	display: inline-block;
-	border:1px solid black;
-	z-index: 104;
-}
+	top: 6.4vh;
+    left: 2.6vw;
+    position: absolute;
+    display: inline-block;
+    z-index: 104;
+    font-size: 1.5vw;
+    font-family: 'Cinzel', serif;
+    background-position: center;
+    text-align: center;
+    /*border: 1px solid black;*/
 
-#home{
-	top:5vh;
-	left:5vw;
 }
-
-  .content {
-  	/*height: 70vh;*/
-    width: 81vw;
-    left: 10vw;
-    top: 9.5vh;
+.content {
+    width: 100vw;
+    height: 80vh;
+    top: 47.5vh;
     position: relative;
     z-index: 102;
-    display: none;
+    display: inline-block;
+    background-color: #fdfcfc;
+}
+
+#content_home{
+	left: 6vw;
+    width: 53vw;
+    /* height: 80vh; */
+    top: 8vh;
+    position: relative;
+    z-index: 102;
+    display: inline-block;
     color: black;
     font-weight: bold;
     font-family: 'Crimson Text', serif;
-    font-size: 1.7vw;
+    font-size: 1.4vw;
     text-align: justify;
-    text-justify: inter-word;
-    text-shadow: 2px 2px 8px white;
-    background-color: #f2f2f23d;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    border: 1px solid #f2f2f23d;
-    border-radius: 10px 90px;
-   }
+}
 
+#content_ceo{
+	background-color: #f9f9f900;
+	height:90vh;
+}
 
+#ceo_pic{
+	border: 1px solid black;
+    top: 14vh;
+    left: 4vw;
+    height: 65vh;
+    width: 29vw;
+    display: inline-block;
+    position: relative;
+}
 
-
-
+#ceo_description{
+	border: 1px solid black;
+    top: 14vh;
+    left: 10vw;
+    height: 65vh;
+    width: 56vw;
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2vw;
+    text-align: justify;
+    font-weight: bold;
+    overflow: auto;
+}
 
 #about{
-	top: 38vh;
-    left: 25.05vw;
+	left: 1vw;
 }
 
 #ceo{
-	top:1vh;
-	left:2vw;
+	top: 4vh;
+    left: 0vw;
 }
 
-#gallery{
-	top:1vh;
-	left:2vw;
+#products{
+	left: 1vw;
+
 }
 
 #contact{
-	top:1vh;
-	left:2vw;
+	left: 1.3vw;
 }
 
 
@@ -340,9 +373,9 @@ a:link {
   text-decoration: none;
 }
 
-.hexagon:hover{
-	background-color: #74d2f6;
-}
+/*.hexagon:hover{
+	background-color: #74d2f6;*/
+/*}*/
 a:hover {
   color: grey;
 
@@ -357,9 +390,7 @@ a: active{
 	color: white;
 }
 
-poly: hover{
-	background-color=skyblue;
-}
+
 
 /*.navbar:hover{
   color: white;
@@ -376,11 +407,11 @@ poly: hover{
   to {opacity: 1}
 }
 
-.poly:hover{
-	color: blue;
+/*.poly:hover{
+	background-color: black;
 	cursor: pointer;
 
 }
 .poly{
 
-}
+}*/
