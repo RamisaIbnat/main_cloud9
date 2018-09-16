@@ -2,8 +2,7 @@ html, body {
   margin: 0 0 0 0;
   padding: 0;
   width: 100vw;
-  background: black;
-  overflow-x: hidden;
+  background: white;  
 }
 
 * {box-sizing: border-box}
@@ -11,10 +10,21 @@ html, body {
 .mySlides {display: none}
 img {vertical-align: middle;}*/
 
+/*.full-body{
+	width:100vw;
+	/*height: 100vh;*/
+/*	position: relative;
+	display: inline-block;
+	border: 1px solid black;
+	overflow-y: scroll;
+	overflow-x: hidden;*/
+	/*overflow-x: hidden;
+	overflow-y: scroll
+
 /* Slideshow container */
 .slideshow-container {
-	width: 100%;
-	height: 90vh;
+	width: 100vw;
+	height: 100vh;
 	/*overflow: hidden;*/
 	position: fixed;
 	top:0%;
@@ -26,7 +36,7 @@ img {vertical-align: middle;}*/
 }
 
 .SlideImage {
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	display: inline-block;
 	position: fixed;
@@ -149,6 +159,7 @@ img {vertical-align: middle;}*/
 	bottom:0;
 	width: 100vw;
 	position: relative;
+	z-index: 100;
 }
 
 .logoContainer{
@@ -171,24 +182,21 @@ img {vertical-align: middle;}*/
 .heading {
     left: 47.5vw;
     top: 44vh;
-    width: 45vw;
+    width: 24vw;
     height: 12vh;
     position: relative;
-    /* float: left; */
+    display: inline-block;
     color: rgb(0, 0, 0);
     font-size: 4.8vw;
     font-family: 'Cinzel', serif;
-    /* letter-spacing: .8vw; */
-    /* border: 1px solid black; */
+
     font-weight: bolder;
-    /* text-shadow: -4px 4px 6px black, 4px 4px 10px black, 4px 4px 13px black, 4px 4px 15px black; */
-    /* text-shadow: -2px 0 7px #1c3256, 0 2px 7px #1c3256, 2px 0 8px #1c3256, 0 -2px 10px #1c3256; */
     z-index: 102;
 }
 
 .subHeading{
-    left: 58vw;
-    top: 45vh;
+    left: 33vw;
+    top: 50vh;
     height: 6vh;
     width: 43vw;
     position: relative;
@@ -196,7 +204,8 @@ img {vertical-align: middle;}*/
     font-size: 2.1vw;
     font-family: 'Cinzel', serif;
     font-weight: bolder;
-    /*border: 1px solid black;*/
+    display: inline-block;
+    /* border: 1px solid black; */
     text-shadow: -2px 0 7px #1c3256, 0 2px 7px #1c3256, 2px 0 8px #1c3256, 0 -2px 10px #1c3256;
     z-index: 102;
   }
@@ -205,9 +214,10 @@ img {vertical-align: middle;}*/
 	width: 43vw;
     height: 40vh;
     display: inline-block;
-    top: 10vh;
-    left: 1vw;
-    /*border: 1px solid black;*/
+    top: 16vh;
+    /* top: 9vh; */
+    left: 2vw;
+    /* border: 1px solid black; */
     position: relative;
 }
 
@@ -317,7 +327,7 @@ path:hover, .navbar2:hover {
 
 #content_ceo{
 	background-color: #f9f9f900;
-	height:90vh;
+	height:100vh;
 }
 
 #ceo_pic{
@@ -344,6 +354,7 @@ path:hover, .navbar2:hover {
     text-align: justify;
     font-weight: bold;
     overflow: auto;
+
 }
 
 #about{
@@ -364,34 +375,26 @@ path:hover, .navbar2:hover {
 	left: 1.3vw;
 }
 
-
-a:span{
-  color:white;
-}
-
-a:link { 
-  color: white;
-  text-decoration: none;
-}
-
-/*.hexagon:hover{
-	background-color: #74d2f6;*/
-/*}*/
-a:hover {
-  color: grey;
-
-}
-
-a: visited{
-  color: white;
-  /*text-decoration: none;*/
-}
-
-a: active{
-	color: white;
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
 }
 
 
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: inset 0 0 6px rgb(0, 0, 0);
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px #afcfff;
+    border-radius: 10px;
+}
 
 /*.navbar:hover{
   color: white;
