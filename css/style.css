@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   width: 100vw;
   background: white;  
+  height: 100vh;
 }
 
 * {box-sizing: border-box}
@@ -10,17 +11,17 @@ html, body {
 .mySlides {display: none}
 img {vertical-align: middle;}*/
 
-/*.full-body{
+#fullpage{
 	width:100vw;
-	/*height: 100vh;*/
+	height: 100vh;
 /*	position: relative;
 	display: inline-block;
 	border: 1px solid black;
 	overflow-y: scroll;
 	overflow-x: hidden;*/
 	/*overflow-x: hidden;
-	overflow-y: scroll
-
+	overflow-y: scroll*/
+}
 /* Slideshow container */
 .slideshow-container {
 	width: 100vw;
@@ -104,10 +105,10 @@ img {vertical-align: middle;}*/
   float:left;
 }
 
-.active, .dot:hover {
+/*.active, .dot:hover {
   background-color: #717171;
 }
-
+*/
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -138,7 +139,7 @@ img {vertical-align: middle;}*/
     background-color: white;
 
 }
-.navbar {
+/*.navbar {
     width: 38vw;
     left: 8vw;
     top: 0vh;
@@ -151,7 +152,7 @@ img {vertical-align: middle;}*/
     font-weight: normal;
     display: inline-block;
     z-index: 101;
-}
+}*/
 
 
 .main{
@@ -198,7 +199,7 @@ img {vertical-align: middle;}*/
     left: 33vw;
     top: 50vh;
     height: 6vh;
-    width: 43vw;
+    width: 26vw;
     position: relative;
     color: white;
     font-size: 2.1vw;
