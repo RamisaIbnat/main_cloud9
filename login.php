@@ -15,7 +15,7 @@
 			header('Location: secret.php');
 			die('passed :)');
 		}else{
-			echo 'login failed :(';
+			echo 'Login failed :(';
 		}
 	}
  ?>
