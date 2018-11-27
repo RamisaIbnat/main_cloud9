@@ -14,11 +14,10 @@ img {vertical-align: middle;}*/
 #fullpage{
 	width:100vw;
 	height: 100vh;
-/*	position: relative;
+	position: relative;
 	display: inline-block;
 	border: 1px solid black;
-	overflow-y: scroll;
-	overflow-x: hidden;*/
+	overflow-x: hidden;
 	/*overflow-x: hidden;
 	overflow-y: scroll*/
 }
@@ -116,7 +115,9 @@ img {vertical-align: middle;}*/
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
+ #login{
+     z-index: 104;
+ }
 .circleContainer {
     display: inline-block;
     height: 3%;

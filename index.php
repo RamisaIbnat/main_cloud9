@@ -1,3 +1,16 @@
+<?php
+    include_once "db_login.php"; 
+
+    if (!$con)   /*  check if the connection was actually successful  */
+    {
+        exit("Could not connect to the database: <br/>" . 
+            htmlspecialchars(mysql_error()) );
+    }
+    else{
+		echo "connected";
+	}
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,9 +42,9 @@
 		    	<img class='SlideImage'  src="css/images/telecom4.jpg">
 		    </div>
 		</div>
-
 		<div class="main">
 			<!-- <div class="header"></div> -->
+			<div id="login"><a href="login.php"><h1>Login</h1></a></div>
 			<div class="logoContainer"></div>
 			<div class="heading">CLOUD 9</div>
 			<div class="subHeading">BEST IN THE BUSINESS</div>
@@ -111,9 +124,9 @@
 		  <!-- 	  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 		  	<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 
-	<script type="text/javascript"> 
+	<!-- <script type="text/javascript"> 
 		$('#fullpage').fullpage();
-	</script>
+	</script> -->
 	<script src="js/slideshow.js"></script>
 </body>
 </html>
