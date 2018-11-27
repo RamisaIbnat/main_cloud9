@@ -115,9 +115,21 @@ img {vertical-align: middle;}*/
   animation-name: fade;
   animation-duration: 1.5s;
 }
- #login{
-     z-index: 104;
- }
+
+#login{
+    z-index: 104;
+    position: relative;
+    display: inline-block;
+    font-size: 1vw;
+    font-weight: bold;
+    color: black;  
+}
+
+a:visited, a:link, a:active{
+    color: black;
+    text-decoration: none;
+}
+
 .circleContainer {
     display: inline-block;
     height: 3%;

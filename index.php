@@ -37,14 +37,13 @@
 		    <div class="mySlides fade" id="image2">
 		    	<img class='SlideImage'  src="css/images/telecom21.jpg">
 		  	</div>
-
 		  	<div class="mySlides fade" id="image3">
 		    	<img class='SlideImage'  src="css/images/telecom4.jpg">
 		    </div>
 		</div>
 		<div class="main">
 			<!-- <div class="header"></div> -->
-			<div id="login"><a href="login.php"><h1>Login</h1></a></div>
+			<div id="login"><a href="login.php" id="login1">Login</a></div>
 			<div class="logoContainer"></div>
 			<div class="heading">CLOUD 9</div>
 			<div class="subHeading">BEST IN THE BUSINESS</div>
