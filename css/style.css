@@ -384,38 +384,18 @@ box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
     float: left;
 }
 
-/* #des1:hover{
-    top: 5%;
-    left: 0.5%;
-    right: 2%;
-    height: 90%;
-    width: 35%;
-} */
 
 #des2{
     left: 5.3%;
 }
 
-/* #des2:hover{
-    top: 5%;
-    left: 0.5%;
-    right: 2%;
-    height: 90%;
-    width: 35%;
-} */
 
 #des3{
     left: 7%;
     /* float: right; */
 }
 
-/* #des3:hover{
-    top: 5%;
-    left: 0.5%;
-    right: 2%;
-    height: 90%;
-    width: 35%;
-} */
+
 
 .ceo_text{
     margin-top: 7%;
