@@ -428,7 +428,8 @@ box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
 }
 
 #about_id{
-    background-color: #f9f9f900;
+    background-color: white;
+    background-image: url("images/telecom8.jpg");
 }
 
 #ceo{

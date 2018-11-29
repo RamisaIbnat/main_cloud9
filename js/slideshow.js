@@ -18,13 +18,13 @@ function slideShow() {
 
     if (n==1) {
         console.log("Setting the first slide colour to white");
-        document.getElementById("content").style.color="black";
+        document.getElementById("content1").style.color="black";
     }
     else if (n==2) {
-        document.getElementById("content").style.color="black";
+        document.getElementById("content1").style.color="black";
     }
         else if (n==3) {
-        document.getElementById("content").style.color="black";
+        document.getElementById("content1").style.color="black";
     }
     n++;
     if (n>3) {
