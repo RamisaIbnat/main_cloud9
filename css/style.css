@@ -333,13 +333,13 @@ path:hover, .navbar2:hover {
     background-color: #fdfcfc;
 }
 
-#content1{
+/* #content1{
     height:76%;
-}
+} */
 
 #content_home{
-	left: 6vw;
-    width: 53vw;
+	left: 6%;
+    width: 75%;
     /* height: 80vh; */
     top: 8vh;
     position: relative;
@@ -424,11 +424,16 @@ box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
 }
 
 #about{
-	left: 1vw;
+    left:12%;
+}
+
+#about_id{
+    background-color: #f9f9f900;
 }
 
 #ceo{
-	top: 4vh;
+    top: 4vh;
+    left:1%;
 }
 
 #products{
