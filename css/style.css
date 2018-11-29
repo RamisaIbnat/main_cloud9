@@ -17,7 +17,7 @@ img {vertical-align: middle;}*/
 	position: relative;
 	display: inline-block;
     border: 1px solid black;
-    
+      
 }
 
 /* Slideshow container */
@@ -32,7 +32,8 @@ img {vertical-align: middle;}*/
 	margin: 0;
 	display: inline-block;
 	z-index: 80;
-	float: left;
+    float: left;
+    
 }
 
 .SlideImage {
@@ -42,7 +43,7 @@ img {vertical-align: middle;}*/
 	position: fixed;
 	top: 0%;
 	left: 0%;
-	z-index: 85;
+    z-index: 85;
 }
 
 /* Hide the images by default */
@@ -103,7 +104,6 @@ img {vertical-align: middle;}*/
   display: inline-block;
   /*transition: background-color 0.6s ease;*/
   bottom:0;
-  float: left;
 }
 
 /*.active, .dot:hover {
@@ -119,12 +119,17 @@ img {vertical-align: middle;}*/
 }
 
 #login{
+    left: 1%;
     z-index: 104;
     position: relative;
     display: inline-block;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: bold;
-    color: black;  
+    color: black;
+    top: 0%;
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-weight: bolder;
 }
 
 a:visited, a:link, a:active{
@@ -143,6 +148,7 @@ a:visited, a:link, a:active{
     border: 2px solid black;
     z-index: 102;
 }
+
 .header{
 	width: 100vw;
     height: 6vh;
@@ -154,6 +160,7 @@ a:visited, a:link, a:active{
     background-color: white;
 
 }
+
 /*.navbar {
     width: 38vw;
     left: 8vw;
@@ -171,8 +178,7 @@ a:visited, a:link, a:active{
 
 
 .main{
-	top: 0;
-    bottom: 0;
+	margin: 0 0 0 0;
     width: 100%;
     height: 100%;
     position: relative;
@@ -186,8 +192,8 @@ a:visited, a:link, a:active{
     border-radius: 50%;
     position: relative;
     float: right;
-    top: 4vh;
-    right: 3vw;
+    top: 5%;
+    right: 3%;
     /* left: 1vw; */
     background-image: url(images/logo.jpg);
     background-repeat: no-repeat;
@@ -199,14 +205,13 @@ a:visited, a:link, a:active{
 .heading {
     left: 49%;
     top: 45%;
-    width: 24vw;
-    height: 12vh;
+    width: 23%;
+    height: 12%;;
     position: relative;
     display: inline-block;
     color: rgb(0, 0, 0);
     font-size: 4.8vw;
     font-family: 'Cinzel', serif;
-
     font-weight: bolder;
     z-index: 102;
 }
@@ -214,8 +219,8 @@ a:visited, a:link, a:active{
 .subHeading{
     left: 33%;
     top: 51%;
-    height: 6vh;
-    width: 26vw;
+    height: 6%;
+    width: 26%;
     position: relative;
     color: white;
     font-size: 2.1vw;
@@ -349,24 +354,76 @@ path:hover, .navbar2:hover {
 
 #content_ceo{
 	background-color: #f9f9f900;
-	height:100vh;
+	height:100%;
 }
 
 .ceo_des{
-	border: 1px solid black;
+	/* border: 1px solid black; */
     top: 10%;
     left: 3%;
     height: 80%;
     width: 30%;
     display: inline-block;
     position: relative;
+    background-color: aliceblue;
+    /* font-weight: bold; */
+    text-align: justify;
+    text-justify: inter-word;
+    overflow: auto;
+    -webkit-box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
+box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
+
+}
+
+.ceo_des:hover{
+    transform: scale(1.1);
+}
 
 #des1{
     float: left;
 }
 
+/* #des1:hover{
+    top: 5%;
+    left: 0.5%;
+    right: 2%;
+    height: 90%;
+    width: 35%;
+} */
+
+#des2{
+    left: 5.3%;
+}
+
+/* #des2:hover{
+    top: 5%;
+    left: 0.5%;
+    right: 2%;
+    height: 90%;
+    width: 35%;
+} */
+
 #des3{
-    float: right;
+    left: 7%;
+    /* float: right; */
+}
+
+/* #des3:hover{
+    top: 5%;
+    left: 0.5%;
+    right: 2%;
+    height: 90%;
+    width: 35%;
+} */
+
+.ceo_text{
+    margin-top: 7%;
+    margin-left: 4%;
+    margin-right: 10%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1vw;
+    
 }
 
 #ceo_description{
@@ -379,7 +436,7 @@ path:hover, .navbar2:hover {
     position: relative;
     background-color: white;
     font-family: 'Crimson Text', serif;
-    font-size: 1.2vw;
+    font-size: 1vw;
     text-align: justify;
     font-weight: bold;
     overflow: auto;
@@ -392,7 +449,6 @@ path:hover, .navbar2:hover {
 
 #ceo{
 	top: 4vh;
-    left: 0vw;
 }
 
 #products{
@@ -439,12 +495,3 @@ height: 12px;
   from {opacity: .4} 
   to {opacity: 1}
 }
-
-/*.poly:hover{
-	background-color: black;
-	cursor: pointer;
-
-}
-.poly{
-
-}*/
