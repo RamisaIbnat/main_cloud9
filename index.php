@@ -1,16 +1,16 @@
- <!-- ?php
-    // include_once "db_login.php"; 
+ <?php
+     include_once "db_login.php"; 
 
-    // if (!$con)   /*  check if the connection was actually successful  */
-    // {
-    //     exit("Could not connect to the database: <br/>" . 
-    //         htmlspecialchars(mysql_error()) );
-    // }
-    // else{
-	// 	echo "connected";
-	// }
+     if (!$con)   /*  check if the connection was actually successful  */
+    {
+       exit("Could not connect to the database: <br/>" . 
+            htmlspecialchars(mysql_error()) );
+     }
+    else{
+		// <!-- echo "connected"; -->
+	}
 
-?> // -->
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +42,7 @@
 		    </div>
 		</div>
 		<div class="main">
-			<div id="login" id="login1">Login</div>
+			<div id="login" id="login1"><a href="login.php">Login</a></div>
 			<div class="logoContainer"></div>
 			<div class="heading">CLOUD 9</div>
 			<div class="subHeading">BEST IN THE BUSINESS</div>
@@ -194,17 +194,21 @@
 			 <div class="content" id="contact_id"> 
 					<div id="content_contact">  
 						<h3>Find Us:</h3>
-							<p>
-									&nbsp Cloud 9<br/>
-									&nbsp House 1033, Road 9, DOHS Mirpur<br/>
-									&nbsp Dhaka 1216, Bangladesh<br/>
-									&nbsp Mob: +8801711182838, +8801552378499<br/>
-									&nbsp Email: info@cloud9.com.bd<br/>
-									&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp sales@cloud9.com.bd<br/>
-									&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp nine_cloud@live.com<br/>
-									&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp nine.cloud@live.com<br/>
+						<p>
+						&nbsp Cloud 9<br/>
+						&nbsp House 1033, Road 9, DOHS Mirpur<br/>
+						&nbsp Dhaka 1216, Bangladesh<br/>
+						&nbsp Mob: +8801711182838, +8801552378499<br/> </p>
+					</div>
+					<div id="content_contact"> 
+						<p>
+							&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp Email: <br/>
+							&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp info@cloud9.com.bd<br/>
+							&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp sales@cloud9.com.bd<br/>
+							&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp nine_cloud@live.com<br/>
+							&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp nine.cloud@live.com<br/>
 									
-								</p>         
+						</p>         
 
 							
    

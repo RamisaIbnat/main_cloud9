@@ -3,7 +3,9 @@
     
     if (!empty($_POST['submit'])) {
 		# code...
+		
 		include 'db_login.php';
+		echo "could not connect";
         $sql = "SELECT * FROM users WHERE username='" . $_POST["uname"] ."' and password = '". $_POST["passwd"] . "'";
         
 		$result=$con->query($sql);
@@ -45,13 +47,20 @@
 		    	<img class='SlideImage'  src="css/images/telecom4.jpg">
 		    </div>
 		</div>
-	<h1>Login</h1>
+		<div class="content" id="login_form">
+	<center><h1 >Login</h1>
+	
 	<form action="" method="POST">
+	<br>
 		username: <input type="text" name="uname"/><br>
+		<br>
 		password: <input type="password" name="passwd"/><br>
-		<input type="submit" name="submit"/>
+		<input type="submit" name="submit" id="button"/>
 	</form>
-	or <a href="signup.php">Signup</a>
+	</center>
+</div>
+	</div>
+	
 	<script src="js/slideshow.js"></script>
 	</body>
 </html>
