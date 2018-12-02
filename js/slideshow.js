@@ -1,6 +1,18 @@
 var n = 1;
 changeColorOfHexagon();
 slideShow();
+onHoverScroll();
+myMap();
+
+
+function myMap() {
+	var mapProp= {
+		center:new google.maps.LatLng(23.834664144326677, 90.36894787120819),
+			zoom:10,
+		};
+	 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+	
 
  // dynamicHeight();
 var slideIndex=0;
@@ -183,11 +195,26 @@ function addPathName(hoverElement, pathElement){
 }
 
 function onHoverScroll(){
-	$(.ceo_des).on('mouseenter',  function() {
-		this.iid = setInterval(function() {
-		   var top = $('.inner').css('top').replace('px','');
-		  console.log(top);
-		$('.inner').css({'top':(parseInt(top) - 1)+'px'});          
-		}, 25);)
-	}
+	
+	$("#des1").mouseenter(function(){
+		$("#des1").css("overflow-y", "auto");
+	  });
+	  $("#des1").mouseleave(function(){
+		$("#des1").css("overflow-y", "hidden");
+	  });
+
+	  $("#des2").mouseenter(function(){
+		$("#des2").css("overflow-y", "auto");
+	  });
+	  $("#des2").mouseleave(function(){
+		$("#des2").css("overflow-y", "hidden");
+	  });
+
+	  $("#des3").mouseenter(function(){
+		$("#des3").css("overflow-y", "auto");
+	  });
+	  $("#des3").mouseleave(function(){
+		$("#des3").css("overflow-y", "hidden");
+	  });
+
 }

@@ -310,34 +310,33 @@ path:hover, .navbar2:hover {
 }
 
 #ceo{
-    top: 4vh;
-    left:1%;
+    top: 37%;
+    left: 8%;
 }
 
 #products{
-	left: 1vw;
+	left: 13%;
 
 }
 
 #contact{
-	left: 1.3vw;
+	left: 16%;
 }
 
 #about{
-    left:12%;
+    left:4%;
 }
 
 .navbar2{
-	top: 6.4vh;
-    left: 2.6vw;
+	top: 39%;
+    left: 27.6%;
     position: absolute;
     display: inline-block;
     z-index: 104;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     font-family: 'Cinzel', serif;
     background-position: center;
     text-align: center;
-    /*border: 1px solid black;*/
 
 }
 .content {
@@ -374,21 +373,19 @@ path:hover, .navbar2:hover {
 }
 
 .ceo_des{
-    top: 10%;
+    top: 20%;
     left: 3%;
-    height: 80%;
+    height: 60%;
     width: 30%;
     display: inline-block;
     position: relative;
-    background-color: aliceblue;
+    background-color: #f0f8ffd1;
     text-align: justify;
     text-justify: inter-word;
-    
     -webkit-box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
     box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
-    border-radius: 15px 70px;
-
+    /* border-radius: 15px 70px; */
     overflow: hidden;
 
 }
@@ -481,7 +478,7 @@ path:hover, .navbar2:hover {
     font-size: 1.2vw;
     text-align: justify;
     padding: 1.5%;
-    float: left;
+    float:left;
     border-radius: 15px 70px;
 
 }
@@ -493,8 +490,16 @@ path:hover, .navbar2:hover {
     left:24%;
 }
 
- #contact_id{
-    top: 47%;
+#contact_id{
+    top: 47.5%;
+    background-color: #0000008c;
+ }
+
+#googleMap{
+    height:50%;
+    width:50%;
+     position: relative;
+     display:inline-block;
  }
 
 ::-webkit-scrollbar {
