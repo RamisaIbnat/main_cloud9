@@ -1,10 +1,46 @@
 <?php 
+	 include_once "db_login.php";
+
 	session_start();
 
 	if (!$_SESSION['is_login']) {
 		# code...
 		die('you no see page!');
 	}
+
+	if (isset($_POST["update"])){
+
+		$filepath = "images/" . $_FILES["file"]["name"];
+ 
+		if(move_uploaded_file($_FILES["file"]["tmp_name"], $filepath)) 
+		{
+		echo "<img src=".$filepath." height=200 width=300 />";
+		} 
+		else 
+		{
+		echo "Error !!";
+		}
+
+		$sl = mysqli_real_escape_string($con, $_POST['sl']);
+		$picture = mysqli_real_escape_string($con, $_POST['picture']);
+		$description = mysqli_real_escape_string($con, $_POST['description']);
+
+		$query1="INSERT INTO client (picture, description) VALUES ('$picture', '$description')";
+		
+		$retval = mysqli_query($con, $query1);
+		
+		header("main_cloud9/secret.php");
+
+		if(!$retval ) {
+			die('Could not update data: ' . mysql_error());
+			}
+			else{
+			echo "Updated data successfully\n";
+			}
+
+			
+	}
+	
  ?>
 <html>
 	<head>
@@ -40,6 +76,43 @@
     color: white;"><h4>Hello <?php echo $_SESSION['name']; ?> (<a href="logout.php">Logout</a>)</h4></div>
 	<button class="button" id="ChngCont">Change Content</button>
 	<button class="button" id="ViewQuery">View Queries</button>
+
+	<center><div class="content" id="changeContent">
+
+	 <table >
+
+		<tr>
+		<th> Sl</th>
+		<th> Product</th>
+		<th> Picture </th>
+		</tr> 
+		<?php 
+			$q = "SELECT * from products";
+			$r = mysqli_query($con,$q);
+			while($row = mysqli_fetch_array($r)){
+				echo "<tr>";
+				echo "<td>". $row['Sl']."</td>";
+				echo "<td>". $row['Product']."</td>";
+				echo "<td>". $row['Picture']."</td>";
+				echo "</tr>";
+			}
+		?>
+		</table>
+
+	
+		<div id=UpdateInfo>
+			<form name="updateList" action="secret.php" method="post">To Update information: 
+			<span>Picture <input type="file" name="file"></span>
+			<!-- <span>Description <input type="text" name="description" placeholder="Write a description of the item" ></span> -->
+			<input type="Submit" name="update" value="Update information"/><br><br>
+			</form>
+		</div>
+	</table>
+
+	
+
+	</div>
+	</center>
 </div>
 </div>
 <script src="js/slideshow.js"></script>

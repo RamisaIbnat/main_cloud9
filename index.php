@@ -10,6 +10,19 @@
 		// <!-- echo "connected"; -->
 	}
 
+	if (isset($_POST["update"])){
+
+		$sl = mysqli_real_escape_string($con, $_POST['sl']);
+		$picture = mysqli_real_escape_string($con, $_POST['picture']);
+		$description = mysqli_real_escape_string($con, $_POST['description']);
+
+		$query1="INSERT INTO client (picture, description)""
+		VALUES
+		('$name','$picture', '$description',)"
+		
+        $retval = mysqli_query($con, $query1);
+	}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -158,6 +171,25 @@
 			 </div>
 			 <div class="content" id="products_id"> 
 				 <div id="content_products">
+				 <table >
+
+					<tr>
+					<th> Sl</th>
+					<th> Product</th>
+					<th> Picture </th>
+					</tr> 
+					<?php 
+						$q = "SELECT * from products";
+						$r = mysqli_query($con,$q);
+						while($row = mysqli_fetch_array($r)){
+							echo "<tr>";
+							echo "<td>". $row['Sl']."</td>";
+							echo "<td>". $row['Product']."</td>";
+							echo "<td>". $row['Picture']."</td>";
+							echo "</tr>";
+						}
+					?>
+				 </table>
 				 </div>
 				 
 			 </div>
