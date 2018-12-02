@@ -17,7 +17,6 @@ img {vertical-align: middle;}*/
 	position: relative;
 	display: inline-block;
     border: 1px solid black;
-      
 }
 
 /* Slideshow container */
@@ -310,6 +309,24 @@ path:hover, .navbar2:hover {
     position: relative;
 }
 
+#ceo{
+    top: 4vh;
+    left:1%;
+}
+
+#products{
+	left: 1vw;
+
+}
+
+#contact{
+	left: 1.3vw;
+}
+
+#about{
+    left:12%;
+}
+
 .navbar2{
 	top: 6.4vh;
     left: 2.6vw;
@@ -328,28 +345,27 @@ path:hover, .navbar2:hover {
     height: 100%;
     top: 48%;;
     position: relative;
-    z-index: 102;
+    z-index: 100;
     display: inline-block;
     background-color: #fdfcfc;
 }
 
-/* #content1{
-    height:76%;
-} */
 
 #content_home{
-	left: 6%;
-    width: 75%;
-    /* height: 80vh; */
-    top: 8vh;
-    position: relative;
-    z-index: 102;
+    /* height: 35%; */
+    width: 65%;
+    top: 10%;
+    left: 6%;
     display: inline-block;
-    color: black;
+    position: relative;
+    opacity: 1;
+    background-color: white;
+    z-index: 105;
     font-weight: bold;
     font-family: 'Crimson Text', serif;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     text-align: justify;
+    padding: 1%;
 }
 
 #content_ceo{
@@ -400,7 +416,6 @@ box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
     margin-top: 7%;
     margin-left: 4%;
     margin-right: 10%;
-    
     font-family: 'Roboto', sans-serif;
     font-size: 1vw;
     
@@ -423,28 +438,61 @@ box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
 
 }
 
-#about{
-    left:12%;
+#content_products{
+    height:100%;
+    width:100%;
+    display: inline-block;
+    position: relative;
 }
 
 #about_id{
-    background-color: white;
+    background-color: #ffffff59;
+    z-index: 100;
+    margin-top: 0;
+    padding-top: 0;
+    top: 47.5%;
+    position: relative;
+}
+
+#content_about{
     background-image: url("images/telecom8.jpg");
+    opacity: 0.5;
+    z-index: 102;
+    height:100%;
+    width:100%;
+    display: inline-block;
+    position: relative;
 }
 
-#ceo{
-    top: 4vh;
-    left:1%;
+.about_box{
+    height: 35%;
+    width: 29%;
+    top: -78%;
+    left: 6%;
+    display: inline-block;
+    position: relative;
+    opacity: 1;
+    background-color: white;
+    z-index: 105;
+    font-weight: bold;
+    font-family: 'Crimson Text', serif;
+    font-size: 109%;
+    text-align: justify;
+    padding: 1%;
+    float:left;
+    border-radius: 15px 50px;
 }
 
-#products{
-	left: 1vw;
-
+#box1{
+    left:10%;
+}
+#box2{
+    left:10%;
 }
 
-#contact{
-	left: 1.3vw;
-}
+ #contact_id{
+    top: 47%;
+ }
 
 ::-webkit-scrollbar {
 width: 12px;

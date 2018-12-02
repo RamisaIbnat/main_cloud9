@@ -126,32 +126,30 @@ function hexagonHoverIn(hoverElement){
 	print('hoverElement = '+hoverElement);
 	print('pathElement = '+pathElement);
 
-
-
-		$(pathElement).css('fill','#6292dad4');
-		$(pathElement).css('stroke','white');
-		$(hoverElement).css('color','white');
+	$(pathElement).css('fill','#6292dad4');
+	$(pathElement).css('stroke','white');
+	$(hoverElement).css('color','white');
 	}
 
 //this function animates the hexagon when the mouse leaves
 
 function hexagonHoverOut(hoverElement){
 
-		pathElement='';
-	    var HOVER = addPathName(hoverElement, pathElement);
-	    var hoverElement = HOVER[0];
-	    var pathElement = HOVER[1];
+	pathElement='';
+	var HOVER = addPathName(hoverElement, pathElement);
+	var hoverElement = HOVER[0];
+	var pathElement = HOVER[1];
 
-	    print('/////////////////////');
-		print('entered hexagonHoverOUT function');
-		print('/////////////////////');
-		print('hoverElement = '+hoverElement);
-		print('pathElement = '+pathElement);
+	print('/////////////////////');
+	print('entered hexagonHoverOUT function');
+	print('/////////////////////');
+	print('hoverElement = '+hoverElement);
+	print('pathElement = '+pathElement);
 
-		print('mouse left for '  + String($(this).attr('id')))
- 		$(pathElement).css('fill','white');
-		$(pathElement).css('stroke','black');
-		$(hoverElement).css('color','black');
+	print('mouse left for '  + String($(this).attr('id')))
+ 	$(pathElement).css('fill','white');
+	$(pathElement).css('stroke','black');
+	$(hoverElement).css('color','black');
  	}
 
 //this function adds the corresponding path name or hover name for each of the elements the mouse hovers on
