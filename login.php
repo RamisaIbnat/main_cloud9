@@ -55,7 +55,7 @@
 		username: <input type="text" name="uname"/><br>
 		<br>
 		password: <input type="password" name="passwd"/><br>
-		<input type="submit" name="submit" id="button"/>
+		<input type="submit" name="submit" class="button"/>
 	</form>
 	</center>
 </div>
