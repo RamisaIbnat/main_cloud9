@@ -181,3 +181,13 @@ function addPathName(hoverElement, pathElement){
 
 	return [hoverElement, pathElement];
 }
+
+function onHoverScroll(){
+	$(.ceo_des).on('mouseenter',  function() {
+		this.iid = setInterval(function() {
+		   var top = $('.inner').css('top').replace('px','');
+		  console.log(top);
+		$('.inner').css({'top':(parseInt(top) - 1)+'px'});          
+		}, 25);)
+	}
+}
