@@ -387,12 +387,14 @@ path:hover, .navbar2:hover {
     box-shadow: 9px 9px 4px 0px rgba(0,0,0,0.75);
     /* border-radius: 15px 70px; */
     overflow: hidden;
+    transition: 300ms;
 
 }
 
 .ceo_des:hover{
     transform: scale(1.1);
     background-position:0px -200px;
+    transition: 300ms;
 }
 
 #des1{
@@ -492,6 +494,23 @@ path:hover, .navbar2:hover {
 
 #contact_id{
     top: 47.5%;
+    background-color: #0000008c;
+ }
+
+ #content_contact{
+     top: 20%;
+     left:30%;
+     position: relative;
+     display:inline-block;
+     color:white;
+     font-weight: bold;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2vw;
+    text-align: justify;
+ }
+
+ #query{
+    top: 47%;
     background-color: #0000008c;
  }
 
