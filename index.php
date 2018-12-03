@@ -1,29 +1,38 @@
- <?php
-     include_once "db_login.php"; 
+<?php
+    include_once "db_login.php"; 
 
-     if (!$con)   /*  check if the connection was actually successful  */
+    if (!$con)   /*  check if the connection was actually successful  */
     {
-       exit("Could not connect to the database: <br/>" . 
+        exit("Could not connect to the database: <br/>" . 
             htmlspecialchars(mysql_error()) );
-     }
+    }
     else{
-		// <!-- echo "connected"; -->
-	}
+        // echo "connected";
 
-	if (isset($_POST["update"])){
+        if (isset($_POST["submit"])){
 
-		$sl = mysqli_real_escape_string($con, $_POST['sl']);
-		$picture = mysqli_real_escape_string($con, $_POST['picture']);
-		$description = mysqli_real_escape_string($con, $_POST['description']);
+            $name = mysqli_real_escape_string($con, $_POST['name']);
+			$email = mysqli_real_escape_string($con, $_POST['email']);
+			$comp_name = mysqli_real_escape_string($con, $_POST['comp_name']);
+            $product_name = mysqli_real_escape_string($con, $_POST['product_name']);
+            $query = mysqli_real_escape_string($con, $_POST['query']);
 
-		$query1="INSERT INTO client (picture, description)""
-		VALUES
-		('$name','$picture', '$description',)"
-		
-        $retval = mysqli_query($con, $query1);
-	}
+            // $sqlMech="UPDATE mechanics SET Appointments = 'Appointments'+1 WHERE Name = '$mechanic'";
+            // $res1 = mysqli_query($con,$sqlMech);
+            
+            $sql="INSERT INTO query (name, email, comp_name, product_name, query)
+                VALUES
+                ('$name','$email', '$comp_name','$product_name', '$query')";
 
-?>
+            if (!mysqli_query($con, $sql)){
+                die('Error: ' . mysqli_connect_error($con));
+            }
+            else{
+                header("main_cloud9/index.php");
+            }
+        }
+    }
+    ?> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -171,14 +180,14 @@
 			 </div>
 			 <div class="content" id="products_id"> 
 				 <div id="content_products">
-				 <table >
+				 <!-- <table >
 
 					<tr>
 					<th> Sl</th>
 					<th> Product</th>
 					<th> Picture </th>
 					</tr> 
-					<?php 
+					<//?php 
 						$q = "SELECT * from products";
 						$r = mysqli_query($con,$q);
 						while($row = mysqli_fetch_array($r)){
@@ -189,7 +198,7 @@
 							echo "</tr>";
 						}
 					?>
-				 </table>
+				 </table> -->
 				 </div>
 				 
 			 </div>
@@ -219,9 +228,21 @@
 			 <!-- </div> -->
 				
 			 <div class="content" id="query"> 
-				 <div id="content_query">  
-
-				 </div>
+				 <!-- <div id="content_query">  -->
+					<div class="panel" id="userPanel">
+						<div class="panel_heading" id="user_heading">Please submit your query below, and we'll get back to you as soon as be:</div>
+						<br><br>
+						<form name="myForm" id="formID" method="post">
+						<div class="userInput"><label class="user_label">Name : </label> <input type="text" name="name" class="user_inputText" required/></div>
+						<div class="userInput"><label class="user_label">Email id : </label> <input type="email" name="email" class="user_inputText" required/></div>
+						<div class="userInput"><label class="user_label">Name of your Company : </label> <input type="text" name="comp_name" class="user_inputText"/></div>
+						<div class="userInput"><label class="user_label">Product you want to know about : </label> <input type="text" name="product_name" class="user_inputText" required/></div>
+						<div class="userInput"><label class="user_label">Please state your Query: </label><textarea name="query" class="user_inputText" id="query_id" required></textarea></div>
+						<center><input type="submit" name="submit" class="button" id="query_button"/></center>
+						</form>
+					</div>
+            	 		<!-- </div>  -->
+				<!-- </div> -->
 			 </div>
 			 <div class="content" id="contact_id"> 
 					<div id="content_contact">  

@@ -499,11 +499,11 @@ path:hover, .navbar2:hover {
 }
 
 #contact_id{
-    height: 50%;
-    top: 46.5%;
+    height: 35%;
+    top: 47%;
     padding-left: 37%;
-    background-color: #0000008c;
-    padding-top: 4%;
+    background-color: #0000008f;
+    padding-top: 2%;
 }
 
  #content_contact{
@@ -572,6 +572,55 @@ path:hover, .navbar2:hover {
 
 }
 
+.userInput{
+    height: 14%;
+    font-size: 1.1em;
+}
+
+.user_inputText{
+    width: 96%;
+    height: 40%;
+    border-radius: 20px;
+}
+
+#formID{
+
+    height: 90%;
+    width: 100%;
+
+}
+.panel{
+    height: 100%;
+    width: 100%;
+    margin: 0% 0%;
+    padding: 6% 24% 12%;
+    background-color: #0c0c0c45;
+    color: aliceblue;
+    font-family: 'Crimson Text', serif;
+    font-size: 1vw;
+}
+
+.panel_heading{
+    height:10%;
+    font-size: 1.1em;
+
+}
+
+#query_id{
+    height: 331%;
+    width: 96%;
+    position: relative;
+    display: inline-block;
+}
+
+#query_button{
+    margin-top: 24%;
+}
+
+#user_heading{
+    font-family: 'Crimson Text', serif;
+    font-size: 1.4vw;
+}
 
 ::-webkit-scrollbar {
 width: 12px;
