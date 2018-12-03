@@ -75,7 +75,7 @@
     font-size: 1.2vw;
     color: white;"><h4>Hello <?php echo $_SESSION['name']; ?> (<a href="logout.php">Logout</a>)</h4></div>
 	<button class="button" id="ChngCont">Change Content</button>
-	<button class="button" id="ViewQuery">View Queries</button>
+	<button class="button" id="ViewQuery" onclick="onClickQuery()">View Queries</button>
 
 	<!-- <center><div class="content" id="changeContent">
 

@@ -3,15 +3,11 @@ changeColorOfHexagon();
 slideShow();
 onHoverScroll();
 myMap();
-onClickEvents();
 
 
-function onClickEvents(){
-	$("#ViewQuery").click(function(){
+function onClickQuery(){
 		$("#clientInfo").css("display","block");
-		$("#clientInfo").css("transition","300ms");
 
-	});
 }
 
  // dynamicHeight();
