@@ -622,6 +622,33 @@ path:hover, .navbar2:hover {
     font-size: 1.4vw;
 }
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    /* height:50%;
+    width:70%; */
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#clientInfo{
+    width: 90%;
+    margin: 4%;
+    position:relative;
+    display:none;
+
+}
+
 ::-webkit-scrollbar {
 width: 12px;
 height: 12px;

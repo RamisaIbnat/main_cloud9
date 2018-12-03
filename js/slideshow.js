@@ -3,16 +3,16 @@ changeColorOfHexagon();
 slideShow();
 onHoverScroll();
 myMap();
+onClickEvents();
 
 
-function myMap() {
-	var mapProp= {
-		center:new google.maps.LatLng(23.834664144326677, 90.36894787120819),
-			zoom:10,
-		};
-	 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+function onClickEvents(){
+	$("#ViewQuery").click(function(){
+		$("#clientInfo").css("display","block");
+		$("#clientInfo").css("transition","300ms");
+
+	});
 }
-	
 
  // dynamicHeight();
 var slideIndex=0;

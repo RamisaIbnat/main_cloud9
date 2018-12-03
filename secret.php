@@ -77,7 +77,7 @@
 	<button class="button" id="ChngCont">Change Content</button>
 	<button class="button" id="ViewQuery">View Queries</button>
 
-	<center><div class="content" id="changeContent">
+	<!-- <center><div class="content" id="changeContent">
 
 	 <table >
 
@@ -87,15 +87,15 @@
 		<th> Picture </th>
 		</tr> 
 		<?php 
-			$q = "SELECT * from products";
-			$r = mysqli_query($con,$q);
-			while($row = mysqli_fetch_array($r)){
-				echo "<tr>";
-				echo "<td>". $row['Sl']."</td>";
-				echo "<td>". $row['Product']."</td>";
-				echo "<td>". $row['Picture']."</td>";
-				echo "</tr>";
-			}
+			// $q = "SELECT * from products";
+			// $r = mysqli_query($con,$q);
+			// while($row = mysqli_fetch_array($r)){
+			// 	echo "<tr>";
+			// 	echo "<td>". $row['Sl']."</td>";
+			// 	echo "<td>". $row['Product']."</td>";
+			// 	echo "<td>". $row['Picture']."</td>";
+			// 	echo "</tr>";
+			// }
 		?>
 		</table>
 
@@ -103,17 +103,44 @@
 		<div id=UpdateInfo>
 			<form name="updateList" action="secret.php" method="post">To Update information: 
 			<span>Picture <input type="file" name="file"></span>
-			<!-- <span>Description <input type="text" name="description" placeholder="Write a description of the item" ></span> -->
-			<input type="Submit" name="update" value="Update information"/><br><br>
+			 <span>Description <input type="text" name="description" placeholder="Write a description of the item" ></span> -->
+			<!-- <input type="Submit" name="update" value="Update information"/><br><br>
 			</form>
 		</div>
-	</table>
+	</table> --> 
 
-	
+	<div id="clientInfo"><h2>User Query: </h2>
+		<table >
 
-	</div>
-	</center>
-</div>
+			<tr>
+			<th> Sl</th>
+			<th> Name</th>
+			<th> Email id </th>
+			<th> Company Name</th>
+			<th> Product Name </th>
+			<th> date </th>
+			<th> Query </th>
+			
+			</tr> 
+
+			<?php 
+				$q = "SELECT * from query";
+				$r = mysqli_query($con,$q);
+				while($row = mysqli_fetch_array($r)){
+					echo "<tr>";
+					echo "<td>". $row['sl']."</td>";
+					echo "<td>". $row['name']."</td>";
+					echo "<td>". $row['email']."</td>";
+					echo "<td>". $row['comp_name']."</td>";
+					echo "<td>". $row['product_name']."</td>";
+					echo "<td>".$row['date']."</td>";
+					echo "<td>". $row['query']."</td>";
+					
+					echo "</tr>";
+				}
+			?>
+		 </table>
+	 </div>
 </div>
 <script src="js/slideshow.js"></script>
 </body>
