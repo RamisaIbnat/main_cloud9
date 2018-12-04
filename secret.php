@@ -26,6 +26,7 @@
 			
 			//Insert image content into database
 			$insert = $db->query("INSERT into images (image, description) VALUES ('$imgContent', '$description')");
+
 			if($insert){
 				echo "File uploaded successfully.";
 			}else{
@@ -77,11 +78,14 @@
 	<form action="upload.php" method="post" enctype="multipart/form-data">
         Select image to upload:
         <input type="file" name="image"/>
-        <input type="submit" name="submit" value="UPLOAD"/>
 		<input type="text" name="description"/>
+		<input type="submit" name="submit" value="UPLOAD"/>
     </form>
 
-	 <table >
+	</div>
+	</center>
+
+	 <!-- <table >
 
 		<tr>
 		<th> Sl</th>

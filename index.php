@@ -31,8 +31,10 @@
                 header("main_cloud9/index.php");
             }
         }
-    }
-    ?> 
+	}
+    
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -180,25 +182,41 @@
 			 </div>
 			 <div class="content" id="products_id"> 
 				 <div id="content_products">
-				 <!-- <table >
+				 <?php
+				 //Get image data from database
+					// $result = $con->query("SELECT image FROM images WHERE id = {$_GET['id']}");
+					
+					// if($result->num_rows > 0){
+					// 	$imgData = $result->fetch_assoc();
+						
+					// 	//Render image
+					// 	header("Content-type: image/jpg"); 
+					// 	echo $imgData['image']; 
+					// }else{
+					// 	echo 'Image not found...';
+					// }
+					?>
+				 <table >
 
 					<tr>
-					<th> Sl</th>
-					<th> Product</th>
-					<th> Picture </th>
+					<th><img src=""></th>
+					<th></th>
 					</tr> 
-					<//?php 
-						$q = "SELECT * from products";
+					<?php 
+						$q = "SELECT * from images";
 						$r = mysqli_query($con,$q);
-						while($row = mysqli_fetch_array($r)){
+						$i=1;
+						while($row = mysqli_fetch_array($r))
+						
+						{
 							echo "<tr>";
-							echo "<td>". $row['Sl']."</td>";
-							echo "<td>". $row['Product']."</td>";
-							echo "<td>". $row['Picture']."</td>";
+							echo "<td>."http://localhost/main_cloud9/view.php?id=". $row['id']."</td>";
+							echo "<td>". $row['description']."</td>";
 							echo "</tr>";
+							$i++;
 						}
 					?>
-				 </table> -->
+				 </table>
 				 </div>
 				 
 			 </div>

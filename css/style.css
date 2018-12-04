@@ -649,6 +649,18 @@ tr:nth-child(even) {
 
 }
 
+#changeContent{
+    width: 90%;
+    margin: 4%;
+    position:relative;
+    display:none;
+}
+
+.imgBox{
+    height:2em;
+    width:2em;
+}
+
 ::-webkit-scrollbar {
 width: 12px;
 height: 12px;
