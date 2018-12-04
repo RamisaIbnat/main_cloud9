@@ -70,7 +70,7 @@
 			<div class="subHeading">BEST IN THE BUSINESS</div>
 			<div class= navbarContainer2>
 		    	<div class="hexagon_container" id="hex1">
-			    	<span class="navbar2" id="home" onClick="window.location='#content1'">Home</span>
+			    	<span class="navbar2" id="home" onClick="window.location='#content1'" style="{transition:300ms;}">Home</span>
 			    
 			    	<svg class="poly" version="1.1" xmlns="http://www.w3.org/2000/svg" width="10vw" height="17vh" stroke="black" stroke-width="4" viewbox="0 0 320 277.12812921102034" style="filter: drop-shadow(rgba(255, 255, 255, 0.5) 0px 0px 10px);">
 			    		<path id ='path1' fill="#fff" d="M0 138.56406460551017L80 0L240 0L320 138.56406460551017L240 277.12812921102034L80 277.12812921102034Z">
@@ -103,7 +103,7 @@
 			    	</svg>
 			    </div>
 			    <div class="hexagon_container" id="hex6">
-		    		<span class="navbar2" id="contact" onClick="window.location='#contact_id'">Contact</span>
+		    		<span class="navbar2" id="contact" onClick="window.location='#query'">Queries</span>
 		    		
 			    	<svg class="poly" version="1.1" xmlns="http://www.w3.org/2000/svg" width="10vw" height="17vh" stroke="black" stroke-width="4" viewbox="0 0 320 277.12812921102034" style="filter: drop-shadow(rgba(255, 255, 255, 0.5) 0px 0px 10px);"><path id='path5' fill="#fff" d="M0 138.56406460551017L80 0L240 0L320 138.56406460551017L240 277.12812921102034L80 277.12812921102034Z"></path></svg>
 			    </div>
@@ -230,7 +230,7 @@
 			 <div class="content" id="query"> 
 				 <!-- <div id="content_query">  -->
 					<div class="panel" id="userPanel">
-						<div class="panel_heading" id="user_heading">Please submit your query below, and we'll get back to you as soon as be:</div>
+						<div class="panel_heading" id="user_heading">Please submit your query below, and we'll get back to you soon:</div>
 						<br><br>
 						<form name="myForm" id="formID" method="post">
 						<div class="userInput"><label class="user_label">Name : </label> <input type="text" name="name" class="user_inputText" required/></div>

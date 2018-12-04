@@ -6,9 +6,16 @@ myMap();
 
 
 function onClickQuery(){
-		$("#clientInfo").css("display","block");
-
+	    $("#changeContent").css("display","none");
+		$("#clientInfo").css("display","inline-block");
 }
+
+function onClickCont(){
+	$("#clientInfo").css("display","none");
+	$("#changeContent").css("display","inline-block");
+}
+
+
 
  // dynamicHeight();
 var slideIndex=0;

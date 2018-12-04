@@ -8,40 +8,35 @@
 		die('you no see page!');
 	}
 
-	if (isset($_POST["update"])){
+	if(isset($_POST["submit"])){
+		$check = getimagesize($_FILES["image"]["tmp_name"]);
+		if($check !== false){
+			$image = $_FILES['image']['tmp_name'];
+			$imgContent = addslashes(file_get_contents($image));
 
-		$filepath = "images/" . $_FILES["file"]["name"];
- 
-		if(move_uploaded_file($_FILES["file"]["tmp_name"], $filepath)) 
-		{
-		echo "<img src=".$filepath." height=200 width=300 />";
-		} 
-		else 
-		{
-		echo "Error !!";
-		}
-
-		$sl = mysqli_real_escape_string($con, $_POST['sl']);
-		$picture = mysqli_real_escape_string($con, $_POST['picture']);
-		$description = mysqli_real_escape_string($con, $_POST['description']);
-
-		$query1="INSERT INTO client (picture, description) VALUES ('$picture', '$description')";
-		
-		$retval = mysqli_query($con, $query1);
-		
-		header("main_cloud9/secret.php");
-
-		if(!$retval ) {
-			die('Could not update data: ' . mysql_error());
-			}
-			else{
-			echo "Updated data successfully\n";
-			}
-
+			// //Create connection and select DB
+			// $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 			
+			// // Check connection
+			// if($db->connect_error){
+			// 	die("Connection failed: " . $db->connect_error);
+			// }
+			
+			// $dataTime = date("Y-m-d H:i:s");
+			
+			//Insert image content into database
+			$insert = $db->query("INSERT into images (image, description) VALUES ('$imgContent', '$description')");
+			if($insert){
+				echo "File uploaded successfully.";
+			}else{
+				echo "File upload failed, please try again.";
+			} 
+		}else{
+			echo "Please select an image file to upload.";
+		}
 	}
+	?>
 	
- ?>
 <html>
 	<head>
 	<link rel="Stylesheet" href="css/style.css">
@@ -74,10 +69,17 @@
     font-family: 'Crimson Text', serif;
     font-size: 1.2vw;
     color: white;"><h4>Hello <?php echo $_SESSION['name']; ?> (<a href="logout.php">Logout</a>)</h4></div>
-	<button class="button" id="ChngCont">Change Content</button>
+	<button class="button" id="ChngCont" onclick="onClickCont()">Change Content</button>
 	<button class="button" id="ViewQuery" onclick="onClickQuery()">View Queries</button>
 
-	<!-- <center><div class="content" id="changeContent">
+	<center><div class="content" id="changeContent">
+
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="image"/>
+        <input type="submit" name="submit" value="UPLOAD"/>
+		<input type="text" name="description"/>
+    </form>
 
 	 <table >
 
