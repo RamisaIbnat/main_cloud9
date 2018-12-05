@@ -199,21 +199,33 @@
 				 <table >
 
 					<tr>
-					<th><img src=""></th>
-					<th></th>
+					<th>
+					<!-- <td></td> -->
+					</th>
+					
 					</tr> 
 					<?php 
 						$q = "SELECT * from images";
 						$r = mysqli_query($con,$q);
-						$i=1;
+						$i=0;
 						while($row = mysqli_fetch_array($r))
-						
 						{
-							echo "<tr>";
-							echo "<td>."http://localhost/main_cloud9/view.php?id=". $row['id']."</td>";
-							echo "<td>". $row['description']."</td>";
-							echo "</tr>";
 							$i++;
+							if($i == 1){
+
+							echo "<tr>";
+							echo "<td><img src='http://localhost/main_cloud9/view.php?id=". $row['id']."'></td>";
+							// echo "<td>". $row['description']."</td>";
+							// echo "</tr>";
+							}
+							if($i>1 && $i<5){
+
+					
+								echo "<td><img src='http://localhost/main_cloud9/view.php?id=". $row['id']."'></td>";
+								// echo "<td>". $row['description']."</td>";
+							}
+
+						
 						}
 					?>
 				 </table>

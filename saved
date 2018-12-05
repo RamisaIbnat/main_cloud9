@@ -1,0 +1,4 @@
+
+
+
+echo "<td><img src='http://localhost/main_cloud9/view.php?id=". $row['id']."'></td>";
